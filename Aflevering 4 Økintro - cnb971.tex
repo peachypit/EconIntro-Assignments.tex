@@ -1,0 +1,294 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{datetime}
+\usepackage{advdate}
+\usepackage{lipsum}
+\usepackage{booktabs}
+\setlength{\columnsep}{25 pt}
+\usepackage{tabularx,ragged2e,booktabs,caption}
+\usepackage{subfigure}
+\usepackage{multicol,tabularx,capt-of}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{blkarray}
+\usepackage[top=3.4cm,left=2.4cm,right=2.4cm,bottom=3.4cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{semantic}
+\usepackage{pdfpages}
+%Alt der er procenttegn foran er kommentarer
+
+%Koden nedenfor er til, hvis man vil indsætte et billede
+%\FloatBarrier
+%\begin{center}
+%	\begin{figure}[!ht]	
+%		\centering	
+%\includegraphics[width=0.4\textwidth]{}
+%		\caption{}
+%	\end{figure}
+%\end{center}
+%\FloatBarrier
+\usepackage{fancyhdr}
+
+
+\lhead{Jeppe Færch} %Disse tre er til sidehovedet
+\chead{Introduktion til økonomi}
+\rhead{15-01-2021}
+
+
+\pagestyle{fancy}
+
+
+\begin{document} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  Dokumentet starter her %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section*{Opgave 1} %Disse er typerne af afsnitindeling
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{1.1}
+\textbf{Hvad er forskellen på Bruttonationalprodukt og Bruttonationalindkomst?}
+\\
+Når vi skal sammenligne velstandsniveauer mellem lande, så bruger vi BNP (bruttonationalproduktet). Alternativt kan vi måle velstanden ved brug af BNI (bruttonnationalindkomsten).
+\\
+Forskellen på BNP og BNI er som følger.
+\\\\
+\textbf{Bruttonationalprodukt (BNP)}: Baseret på aktivitet i et land. 
+\\
+Markedsværdi af produktionen af færdigvarer (goder og tjenesteydelser) i løbet af en given periode - typisk et år eller et kvartal. Vi kan opdele BNP efter hvem der forbruger færdigvarerne:
+$$BNP = C + I + G + NX$$
+\\
+C =Privat forbrug af fra husholdninger.\\
+I = Investeringer.\\
+G = Offentligt forbrug.\\
+NX = Netto Export (Export - Import)\\\\
+
+
+\textbf{Bruttonationalindkomst (BNI)}: Baseret på nationalitet
+\\
+BNI er et mål for den samlede indkomst i landet, dette repræsenteres med bruttonationalproduktet plus indkomst tjent fra danskere i udlandet og minus indkomster som sendes ud af landet.
+$$BNI = BNP + NFP$$
+\\
+\textbf{Net Factor Payments (NFP)}: Indkomst modtaget fra faktorer i udlandet, der tilhører landets borgere:\\
+tilbagesendelse af penge, udbetaling af profit, overførsler mellem stater.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{1.2}
+\textbf{Hvorfor regnes SU-overførsler ikke med i bruttonationalproduktet?}\\
+Eftersom staten bruger penge på uddanneslesstøtte til studerende, så skulle det tænkes at det blev talt med i offentligt forbrug, men det gør det ikke. Forbrug er når det offentlige bruger penge på varer eller tjenesteydelser. SU er en udgift for det offentlige, men det tæller ikke med i forbrug fordi staten ikke forbruger noget. Den køber ikke en ydelse, det er en offentlig støtte.  Herunder er pension, SU, dagpenge osv. ikke offentligt forbrug, fordi staten ikke betaler for en ydelse.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{1.3}
+\textbf{Der findes to måder at sammenligne BNP mellem lande. Nævn de to to og forklar forskellen.}
+\\
+For at sammenligne to lande skal deres valutaer konverteres indtil en fælles valuta. Dette kan vi gøre på to måder.\\
+Enten kan vi bruge markedets valutakurser, eller vi kan måle BNP i alle lande ved at bruge en fælles pris PPP (Purchasing Power Parity). Tænk på PPP som at korrigere for det faktum at priserne på goder er forskellige i de to lande.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Opgave 2}
+Der er to og kun to lande i verden: Albanien og Bulgarien. Der er fuldkommen frihandel mellem de to.\\
+De aggregerede investeringer i Albanien er givet ved:
+$$I^{A} = A - ar,$$
+hvor $A,a > 0 $ og $r$ er realrenten. I Bulgarien er det givet ved:
+$$I^{B} = B - br,$$
+hvor $B,b > 0$. De har opsparing $S^{A} $ og $S^{B}$, der er uafhængig af renten ($S^{A}$ er total opsparingen, dvs. summen af privat og offentlig opsparing).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{2.1}
+\textbf{Udled betingelsen for at Albanien er nettoeksportør.}
+\\
+Totalopsparingen i et samfund kan vi skrive som:
+$$S = S^{p} + S^{G} = Y - C - T + T - G = Y - C -G $$
+hvor $Y$ er BNP, hvilket giver:
+$$S = C + I + G +NX- C - G = I +NX$$
+\\
+Med $S = I + NX$ kan vi isolere nettoeksporten $NX = S - I$. Dette gælder for begge lande. 
+\\
+Eftersom Albanien eksporterer mere værdi end den importerer, så har den en positiv nettoeksport. Hermed vil det være givet at Bulgarien har en negativ nettoeksport, fordi de importerer mere end de eksporterer.
+\\
+Hvilket giver for Albanien $S^{A} > I^{A}$ og Bulgarien $S^{B} < I^{B}$.
+\\\\
+Ifølge opgaven er Albanien og Bulgarien de eneste lande i verdenen. Givet at Albanien er nettoeksportør, så kræver det at overskuddet af $| NX^{A} |$  er lig underskuddet af $| NX^{B} |$, ellers ville vi ikke have verdensligevægt.
+$$|NX^{A}| = |NX^{B} |$$
+$$|S^{A} - I^{A}| = |S^{B} - I^{B} |$$
+\\
+Eftersom Albanien har positiv nettoeksport og $S^{B} < I^{B}$, så kan vi skrive: 
+$$S^{A} - I^{A} =  I^{B} - S^{B}$$
+\\
+Givet de aggregerede investeringer fra opgavebeskrivelsen får vi:
+$$ S^{A} - (A - ar) = (B-br) - S^{B} $$
+\\
+Vi omskriver:
+$$ S^{A} - (A - ar) = (B-br) - S^{B}  \Leftrightarrow$$
+$$ S^{A} = (B-br) - S^{B} +  (A - ar) \Leftrightarrow $$
+$$ S^{A} =  A+B -r(a+b) -S^{B} $$
+\\
+Betingelsen for at Albanien er nettoeksportør er derfor:
+$$ S^{A} =  A+B -r(a+b) -S^{B} $$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Opgave 3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{En IS kurve}
+Vi betragter en økonomi hvor BNP er givet ved:
+$$Z = C(Y-T) + G + I(r),$$
+$$C(Y-T) = C_{0} + C_{1}(Y-T),$$
+$$I(r) = I_{0} - I_{1}r,$$
+\\
+hvor $Z$ er planlagte udgifter, $Y$ er BNP, $T$ er skatter, $G$ er offentligt forbrug, $I$ er investeringer, $r$ er renten. $C_{0},C_{1},I_{0},I_{1} > 0$ er alle parameter og $C_{1} < 1$. $T$ og $G$ er eksogene variable. I denne del af opgaven er $r$ også eksogen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3.1}
+\textbf{Forklar hvorfor funktionen $C(Y-T)$ ser ud som den gør og hvorfor $0 < C_{1} < 1$ er en rimelig antagelse.}
+\\
+$C$ betegner forbruget i økonomien. Hvor privat forbrug $C = C_{0} + C_{1}(Y-T)$ er en funktion af disponible indkomst (Y-T). Disponibel indkomst er det beløb en husholdning har til rådighed, efter at have betalt skat.
+\\
+Vi kan hertil antage at $C_{1}$ er positiv, dvs jo højere en indkomst jo højere forbrug har man.
+\\
+Vi kan også antage at $C_{1}$ er mindre end 1. Vi kan se det som at rige mennesker har en større opsparingskvote end fattige mennesker. Hvis du f.eks får en skattelettelse på 20.00 kr, så vil du måske ende ud med at bruge 18.000 kr, dog ikke det fulde beløb. Du vil derfor spare noget af din ekstra indkomst op.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3.2}
+\textbf{Udled IS kurven, dvs. udled $Y$ som funktion af $r,G,T$.}
+\\
+Givet de to ligninger $Z = Y$ og $C$, så kan vi indsætte $C$ i $Z$ og isolere $Y$.
+$$Z = C_{0} + C_{1}(Y-T) + I(r) + G \Leftrightarrow$$
+$$Y = \dfrac{C_{0} - C_{1}T + I + G}{1-C_{1}}$$
+\\
+Hertil indsætter vi $I(r)$ og udleder IS kurven:
+$$Y=\dfrac{C_{0} - C_{1}T + I_{0} - I_{1}r + G}{1-C_{1}}$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3.3}
+\textbf{Udled multiplikatoren: $dY/dG$ og forklar hvorfor den er større end 1.}
+\\
+Hvis vi differentierer $Y$ mht. $G$, så får vi:
+$$\dfrac{dY}{dG} = \dfrac{1}{1 - C_{1}} > 1$$
+\\
+og dette tal er større end 1, fordi $C_{1}$ er positiv men mindre en 1.
+\\
+Lad os fortolke dette. Husk $Y$ er BNP og vi stiller spørgsmålet: hvad sker der med økonomisk aktivitet i samfundet, når vi øger den offentlige forbrug med 1?
+\\
+Vi ser her at stigningen er højere end 1. Det vil sige at hvis vi øger offentligt forbrug med 1 milliard, så stiger BNP med mere end 1 milliard.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3.4}
+\textbf{Hvorfor er (den absolutte værdi af) multiplikatoren mht. $T$ mindre end mht. $G$: $| dY/dT | < | dY/dG |$}
+\\
+Vi differentierer $Y$ mht. $T$:
+ $$\dfrac{dY}{dT} = \dfrac{-C_{1}}{1 - C_{1}} < 0$$
+\\
+Som vi ved fra 3.3 er $dY/dG$ et positivt tal.
+\\
+Men $dY/dT$ er derimod et negativt tal. Den beskriver at hvis staten indkræver flere skattepenge, hvor meget vil  den økonomiske aktivitet falde.
+\\\\
+Hvis vi sammenligner den absolute værdi af disse to, så finder vi at $| dY/dT | < | dY/dG |$.
+\\
+Dette betyder at hvis staten gerne vil øge aktiviteten i samfundet, så har det større indflydelse på BNP, hvis staten bruger de penge på offentligt forbrug (G) end hvis det bruges på skattelettelser (T).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{En LM kurve.}
+Vi tilføjer nu de følgende ligninger til vores model:
+$$M^{d}(Y,r) = M_{0}+M_{1}Y - M_{2}r$$
+$$M^{d} = \dfrac{M}{P},$$
+\\
+hvor $M$ og $P$ er eksogene variable og $M_{0}, M_{1}, M_{2} > 0$ og $M^{d}$ er penge / likviditetsefterspørgslen i økonomien.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3.5}
+\textbf{Forklar hvorfor $M_{1}$ og $M_{2}$ begge er positive.}
+\\
+Givet $M^{d}(Y,r) = M_{0}+M_{1}Y - M_{2}r$ ser vi at $M_{1}$ er en faktor for BNP ($Y$) og $M_{2}$ er en faktor for renten ($r$). Disse faktorer bestemmer derfor hvor meget efterspørgslen på penge $M^{d}(Y,r)$ afhænger af BNP og rente.
+\\\\
+$M_{1}$ er positiv, fordi når indkomsten (BNP) stiger, så stiger efterspørgslen på penge (likviditetsefterspørgslen $M^{d}$).
+\\\\
+Jo højere renten er, jo lavere bliver likviditetsefterspørgslen, fordi alternativomkostningerne ved at holde på dine penge, er renten (r). Hermed er $M_{2}$ positiv, eftersom der er et negativt fortegn foran $M_{2}r$
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3.6}
+\textbf{Udled LM kurven, dvs. udled $Y$ som funktion af $r$ og $M/P$.}
+\\
+Vi kan udlede LM-kurven ved at sætte $M^{d} (Y,r) = \frac{M}{P}$:
+$$M^{d} (Y,r) = \frac{M}{P} \Leftrightarrow$$
+$$M_{0}+M_{1}Y - M_{2}r = \dfrac{M}{P} $$
+\\
+Hermed isolerer vi $r$:
+$$r = \dfrac{M_{0}+M_{1}Y -\frac{M}{P}}{M_{2}}$$
+\\
+hvilket er LM-kurven.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{En ligevægt}
+Tag nu ikke længere renten $r$ som eksogen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3.7}
+\textbf{Tegn IS og LM kurven i et $Y/r$ diagram. Forklar hvorfor $IS$ kurven har negativ hældning og $LM$ kurven har positiv hældning.}
+
+\FloatBarrier
+\begin{center}
+	\begin{figure}[!ht]	
+		\centering	
+\includegraphics[width=0.6\textwidth]{islm.png}
+		\caption{}
+	\end{figure}
+\end{center}
+\FloatBarrier
+
+
+IS-kurven har en negativ hældning, fordi en højere rente indebærer lavere investeringer og fører til mindre indkomst, forbrug osv.
+\\\\
+Ved et højere niveau af indkomst, så vil renten stige for at sikre at efterspørgslen efter reale penge er lig money supply. Eftersom LM-kurven kræver ligevægt på pengemarkedet, så vil LM-kurven have en positiv hældning for at beholde money supply lig pengeefterspørgslen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3.8}
+\textbf{Udled BNP i ligevægt}
+\\
+Givet IS - og LM-kurverne kan vi finde $Y$ (BNP). Først opskriver vi IS og LM igen:
+$$IS: Y=\dfrac{C_{0} - C_{1}T + I_{0} - I_{1}r + G}{1-C_{1}}$$
+$$LM: r = \dfrac{M_{0}+M_{1}Y -\frac{M}{P}}{M_{2}} $$
+\\
+Vi indsætter $r$ i $Y$ og løser for $Y$ (BNP) i ligevægt:
+$$ (1-C_{1})Y = C_{0} - C_{1}T + G + I_{0} - I_{1} \cdot \left(  \dfrac{M_{0}+M_{1}Y -\frac{M}{P}}{M_{2}} \right)  \Leftrightarrow$$
+$$\left(1-C_{1} + I_{1} \frac{M_{1}}{M_{2}} \right)Y = C_{0} - C_{1}T + G + I_{0} - I_{1}\frac{M_{0}}{M_{2}} + \frac{I_{1}}{M_{2}}\frac{M}{P} \Leftrightarrow$$
+$$Y = \dfrac{C_{0} - C_{1}T + G + I_{0} - I_{1}\dfrac{M_{0}}{M_{2}} + \dfrac{I_{1}}{M_{2}}\dfrac{M}{P}}{1 - C_{1} + \dfrac{I_{1}M_{1}}{M_{2}}}$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3.9}
+\textbf{Vis at $dY/dG$ er lavere end den værdi du fandt i spørgsmål 3. Fortolk.}
+\\
+Vi differentierer $Y$ mht. $G$:
+$$\dfrac{dY}{dG} = \dfrac{1}{1 - C_{1} + I_{1} \frac{M_{1}}{M_{2}}}$$
+\\
+hvilket er mindre end $\frac{1}{1-C_{1}}$ fundet i 3.3.
+\\
+Efekten af en stigning i offentligt forbrug $G$ er nu mindre. Dette er fordi en højere rente betyder lavere investeringer, hvilket sænker efterspørgslen. Denne effekt afhænger af $M_{1}$ og $M_{2}$, der henholdsvis påvirkes af BNP ($Y$) og renten ($r$). Og $I_{1}$ bestemmer hvor meget en stigning i renten påvirker efterspørgslen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{3.10}
+\textbf{Der er nu et negativt stød til økonomien: Lave forventninger til fremtiden får folk til at spare mere op og sænke forbruget. Det modellerer vi ved at lade $C_{0}$ falde.}
+\\\\
+\textbf{Find hvor meget centralbanken skal øge pengemængden for at kompensere for faldet i $C_{0}$. Dvs. find $dM/dC_{0}$, under betingelsen at BNP er uændret.}
+\\
+Inden vi kan differentiere, så skal vi isolere $M$ i BNP:
+$$Y = \dfrac{C_{0} - C_{1}T + G + I_{0} - I_{1}\dfrac{M_{0}}{M_{2}} + \dfrac{I_{1}}{M_{2}}\dfrac{M}{P}}{1 - C_{1} + \dfrac{I_{1}M_{1}}{M_{2}}} \Leftrightarrow$$
+$$M = \dfrac{\left( \left( 1 - C_{1} + \dfrac{I_{1}M_{1}}{M_{2}} \right) Y - C_{0} + C_{1}T - G - I_{0} + \dfrac{I_{1}M_{0}}{M_{2}}  \right)M_{2}P }{I_{1}}$$
+\\
+Vi differentierer $M$ mht. $C_{0}$:
+$$\dfrac{dM}{dC_{0}} = -  \dfrac{M_{2}P}{I_{1}}$$
+\\
+For at centralbanken skal kompensere for et fald i $C_{0}$, så skal de øge pengemængden med: 
+$$\dfrac{M_{2}P}{I_{1}}$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  Dokumentet slutter her %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

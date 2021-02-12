@@ -1,0 +1,286 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{datetime}
+\usepackage{advdate}
+\usepackage{lipsum}
+\usepackage{booktabs}
+\setlength{\columnsep}{25 pt}
+\usepackage{tabularx,ragged2e,booktabs,caption}
+\usepackage{subfigure}
+\usepackage{multicol,tabularx,capt-of}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{blkarray}
+\usepackage[top=3.4cm,left=2.4cm,right=2.4cm,bottom=3.4cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{semantic}
+\usepackage{pdfpages}
+%Alt der er procenttegn foran er kommentarer
+
+%Koden nedenfor er til, hvis man vil indsætte et billede
+%\FloatBarrier
+%\begin{center}
+%	\begin{figure}[!ht]	
+%		\centering	
+%\includegraphics[width=0.4\textwidth]{}
+%		\caption{}
+%	\end{figure}
+%\end{center}
+%\FloatBarrier
+\usepackage{fancyhdr}
+
+
+\lhead{Jeppe Færch} %Disse tre er til sidehovedet
+\chead{Introduktion til Økonomi}
+\rhead{11-12-2020}
+
+
+\pagestyle{fancy}
+
+
+\begin{document} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  Dokumentet starter her %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textcolor{red}{Dette er en genaflevering af Opgave 3}
+
+\section*{Opgave 1} 
+
+\textbf{Et marked har efterspørgselsfunktion:}
+$$D(p)=A-ap,$$
+\textbf{hvor $a,A > 0$.}\\
+\subsubsection*{1.1 Udregn priselasticiteten som funktion af efterspørgslen.}
+Vi omskriver vores efterspørgselsfunktion:
+$$D(p)=A-ap \Leftrightarrow q(p)=A-ap$$
+For at  finde priselasticiteten som funktion af efterspørgslen isolerer vi først prisen $p$.
+$$q=A-ap \Leftrightarrow q+ap = A \Leftrightarrow ap = A - q\Leftrightarrow p(q) = \dfrac{A - q}{a}$$
+\\
+Priselasticiteten $\varepsilon$ er defineret som:
+$$\varepsilon = \dfrac{\partial q}{\partial p} \cdot \dfrac{p}{q}$$
+\\
+Givet $\dfrac{\partial q}{\partial p} = -a$ og $p = \dfrac{A - q}{a}$ får vi følgende:
+$$\varepsilon = -a \cdot \dfrac{\dfrac{A-q}{a}}{A - a \cdot \dfrac{A-q}{a}} = \dfrac{-A+q}{A-A+q} = \dfrac{q - A}{q}$$
+\\
+Dermed er priselasticiteten som funktion af efterspørgslen givet ved $\varepsilon (q)= \dfrac{q-A}{q}$.
+
+
+\subsubsection*{1.2 Ved hvilken efterspørgsel er priselasticiteten $-1$.}
+Vi sætter priselasticiteten lig $-1$ og og isolerer efterspørgslen $q$.
+$$\varepsilon (q)=-1 \Leftrightarrow \dfrac{q-A}{q} = -1 \Leftrightarrow q-A = -q \Leftrightarrow 2q = A \Leftrightarrow q = \dfrac{A}{2}$$\\
+Hvilket giver at når efterspørgslen er $q=\dfrac{A}{2}$, så er priselasticiteten $-1$.
+
+\subsubsection*{1.3 }
+En virksomhed har produktionsomkostninger $c$ og står over for efterspørgselskurven $q(p)=A-ap$. Hvor det vil være givet at omsætningen $R = p(q) \cdot q$ og omkostningerne $C(q) = c \cdot q$.  For at maksimere virksomhedens profit vil følgende problem være givet.
+$$max_{q}: p(q)\cdot q - cq$$
+\\
+Vi indsætter $p(q) = \dfrac{A-q}{a}$ og finder førsteordensbetingelsen i forhold til $q$.
+$$max_{q}: \left( \dfrac{A-q}{a} \right) \cdot q - cq$$
+$$FOB:  \dfrac{A-2q}{a} - c = 0$$
+\\
+Vi løser det explicit og får den optimale mængde:
+$$\dfrac{A-2q}{a} - c = 0 \Rightarrow A - 2q = a\cdot c \Rightarrow q = \dfrac{A}{2} - \dfrac{a\cdot c}{2}$$
+\\
+Vi finder den tilsvarende optimale pris ved at indsætte $q$ i $p(q)$.
+$$p(q)= \dfrac{A-\left( \dfrac{A}{2} - \dfrac{ac}{2} \right)}{a} = \dfrac{A}{2a} + \dfrac{c}{2}$$
+\\
+Hermed er den optimale pris $p = \dfrac{A}{2a} + \dfrac{c}{2} $.
+\\\\
+Nu skal vi undersøge om (den absolutte værdi) priselasticiteten er højere eller lavere end 1 for den optimale pris. Vi refererer til formlen for priselasticitet igen:
+$$\varepsilon = \dfrac{\partial q}{\partial p} \cdot \dfrac{p}{q}$$
+\\
+Vi indsætter den optimale pris og optimale mængde, samt $ \dfrac{\partial q}{\partial p} = -a$ og får:
+$$\varepsilon = (-a) \cdot \dfrac{\dfrac{A}{2a} + \dfrac{c}{2}}{\dfrac{A}{2} - \dfrac{a\cdot c}{2}} = \dfrac{-\dfrac{A}{2}-\dfrac{ac}{2}}{\dfrac{A}{2}- \dfrac{ac}{2}} = \dfrac{\dfrac{-A-ac}{2}}{\dfrac{A-ac}{2}} = \dfrac{-A - ac}{A-ac}$$
+\\
+Givet at $-A < A$ og $-ac=-ac$, så vil den absolutte værdi for $\varepsilon$ være: $|\varepsilon | > 1$ for den optimale pris.
+\\\\
+Vi ser nu hvordan den optimale pris $p = \dfrac{A}{2a} + \dfrac{c}{2} $ afhænger af $a$.  Det kan ses at den optimale pris afhænger omvendt proportionalt af $a$, hvor $A$ er proportionalitetskonstanten i $\dfrac{A}{2a}$. Givet at virksomhedens omkostninger er konstante, så vil $\dfrac{c}{2}$ også være konstant.
+\\\\
+Hvis $a$ bliver højere, så vil proportionalitetskonstanten $A$ blive divideret med et højere tal, hvilket vil resultere i at den optimale pris falder.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Opgave 2}
+
+\subsubsection*{Hvad er den højeste skatteprovenue staten kan få ud af denne arbejder?}
+Vi har arbejderen Hans, hvor hans nytte over forbrug og fritid kan beskrives med nyttefunktionen:
+$$u(c,l) = c - \dfrac{\eta}{\eta + 1} (24-l)^{\dfrac{\eta + 1}{\eta}}$$
+\\
+hvor forbrug har prisen $p$ og løn har prisen $w$.
+\\
+Vi kan opstille budgetbetingelsen: $pc + wl = 24w$.
+\\
+Hvor vi isolerer $c$ : $c=24\dfrac{w}{p}-\dfrac{w}{p}l$
+\\
+Ved at indsætte $c$ i nyttefunktionen får vi problemet: $ max_{l}$: $24\dfrac{w}{p}-\frac{w}{p}l - \dfrac{\eta}{\eta + 1} (24-l)^{\dfrac{\eta + 1}{\eta}} $
+\\\\
+Inden vi kan opstille førsteordensbetingelsen, så skal vi se om vi har monotone og konvekse præferencer.
+\\
+Vi har tydelige monotone præferencer, eftersom vi er positivt afhængende af forbrug $c$ og fritid $l$.
+\\
+Vi finder om vi har konvekse præferencer ved at opstille indifferenskurven. Givet fast $\overline{u}$ isolerer vi $c$ i nyttefunktionen og differentierer i forhold til $l$:
+$$c = \overline{u}+ \dfrac{\eta}{\eta + 1} (24-l)^{\dfrac{\eta + 1}{\eta}}$$
+$$\dfrac{\partial c}{\partial l} = -(24-l)^{\dfrac{1}{\eta}} < 0$$
+$$\dfrac{\partial^{2} c}{\partial l^{2}} = +\dfrac{1}{\eta}(24-l)^{\dfrac{1}{\eta}-1} > 0$$
+\\
+Her ses det at vi har konvekse præferencer, eftersom den første afledede er negativ og den anden aflede er positiv.
+\\\\
+Nu kan vi løse maksimeringsproblemet med førsteordensbetingelsen:
+$$max_{l} \, 24\dfrac{w}{p}-\frac{w}{p}l - \dfrac{\eta}{\eta + 1} (24-l)^{\dfrac{\eta + 1}{\eta}}$$
+$$FOB: -\dfrac{w}{p} + (24-l)^{\frac{1}{\eta}} = 0 \Leftrightarrow$$
+$$(24-l)=\left( \dfrac{w}{p} \right)^{\eta}$$
+\\
+$(24-l)$ er arbejdsudbuddet, så vi kan opstille arbejdsudbudsfunktionen: 
+$$S \left( \frac{w}{p} \right)=(24-l)=\left( \dfrac{w}{p} \right)^{\eta}$$
+\\
+Givet arbejdsudbudsfunktionen kan vi nu finde skatteprovenue med følgende formel: 
+\\
+$T = t\cdot w \cdot S(w(1-t)) = t\cdot w \cdot [w(1-t)]^{\eta}$
+\\
+hvor $T$ er skatteprovenue og $t\cdot w$ er skat per time.
+\\
+Vi finder det maksimale skatteprovenue ved at differentiere i forhold til indkomstskatten $t$:
+$$\dfrac{\partial T}{\partial t} = w\cdot [w(1-t)]^{\eta} - \eta \cdot t \cdot w \cdot w \cdot [w(1-t)]^{\eta - 1} = 0$$
+\\
+Vi omskriver dette:
+$$w[w(1-t)]^{\eta} \left( 1 - \dfrac{\eta t}{1-t} \right) = 0 \Leftrightarrow$$
+hvor $w[w(1-t)]^{\eta}$ er positivt, $ \left( 1 - \dfrac{\eta t}{1-t} \right) $ skal være lig nul. Så vi kan isolere $\left( 1 - \dfrac{\eta t}{1-t} \right)$ og finde $t$.
+$$1 - \dfrac{\eta t}{1-t} = 0 \Leftrightarrow 1-t=\eta t \Rightarrow t^{*} =  \dfrac{1}{1 + \eta}$$
+\\
+Den skatteprovenue maksimerede skattesats er $t^{*} = \dfrac{1}{1 + \eta}$.
+\\
+Vi indsætter skattesatsen i skatteprovenue formlen:
+$$T = t\cdot w \cdot S(w(1-t))$$
+$$T = \dfrac{1}{1 + \eta} \cdot w \cdot \left( \dfrac{w(1-\dfrac{1}{1 + \eta})}{p}\right)^{\eta} = \dfrac{1}{1 + \eta} \cdot w \cdot \left( \dfrac{w}{p} - \dfrac{w}{p(1 + \eta} \right)^{\eta} = w \cdot \dfrac{\left( \dfrac{w}{p} - \dfrac{w}{p(1 + \eta)} \right)^{\eta}}{1 + \eta}$$
+\\
+Hvilket er det højeste skatteprovenue som staten kan få ud af Hans.
+
+\subsubsection*{2.2 Vis at den skat der maksimerer skatteprovenuet er "for høj"  til at Patricia vil flytte til Danmark.}
+Vi vil nu vise at den skat der maksimerer skatteprovenuet er "for høj" til at Patricia vil flytte til Danmark. Hun vil kun flytte til Danmark hvis hendes nytte er højere end $\overline{u}$. Antag at:
+$$\overline{u} > \dfrac{1}{\eta +1} \left( \dfrac{\eta}{1+\eta} \dfrac{w}{p} \right)^{\eta + 1}$$
+\\
+Det er givet at hun har samme nyttefunktion som Hans, og hertil har hun også samme arbejdsudbudsfunktion. Hendes budgetbetingelse er $pc+wl=24w$. Givet arbejdsudbudsfunktionen $S \left( \dfrac{w}{p} \right)= 24 - l = \left( \dfrac{w}{p}\right) ^{\eta}$ kan vi isolere $l$:
+$$l = 24 - \left( \dfrac{w}{p} \right) ^{\eta}$$
+\\
+Vi finder $c$ ved at indsætte $l$ i budgetbetingelsen:
+$$c = 24 \dfrac{w}{p} - \dfrac{w}{p}\cdot l = 24 \dfrac{w}{p} - \dfrac{w}{p}\cdot (24-(\dfrac{w}{p})^{\eta}) = \left( \dfrac{w}{p} \right)^{\eta + 1}$$
+\\
+Vi indsætter nu $c$ og $l$ i nyttefunktionen og reducerer:
+$$u(c,l) = c - \dfrac{\eta}{\eta + 1} (24-l)^{\dfrac{\eta + 1}{\eta}}$$
+$$u(c,l) = \left( \dfrac{w}{p} \right)^{\eta + 1}- \dfrac{\eta}{\eta + 1} \left(24- \left(24 - \left( \dfrac{w}{p} \right) ^{\eta} \right) \right)^{\dfrac{\eta + 1}{\eta}}$$
+$$u(c,l) = \left( \dfrac{w}{p} \right)^{\eta + 1}- \dfrac{\eta}{\eta + 1} \left( \left( \dfrac{w}{p} \right) ^{\eta} \right)^{\dfrac{\eta + 1}{\eta}}$$
+$$u(c,l) = \left( \dfrac{w}{p} \right)^{\eta + 1}- \dfrac{\eta}{\eta + 1} \left(  \dfrac{w}{p} \right) ^{\eta + 1}$$
+\\
+Vi tilføjer indkomstskatten til timelønnen $w$, så vi får $w(1-t)$:
+$$u(c,l) = \left( \dfrac{w(1-t)}{p} \right)^{\eta + 1}- \dfrac{\eta}{\eta + 1} \left(  \dfrac{w(1-t)}{p} \right) ^{\eta + 1}$$
+\\
+Givet $t^{*} = \dfrac{1}{\eta +1}$ får vi givet at hendes nytte efter indkomstskatten er:
+$$u = \left( \dfrac{w \left( 1 - \frac{1}{\eta + 1} \right)}{p} \right)^{\eta + 1} - \dfrac{\eta}{\eta + 1} \left(  \dfrac{w\left( 1 - \frac{1}{\eta + 1} \right)}{p} \right) ^{\eta + 1} \Leftrightarrow$$
+$$u = \left( \dfrac{w \left( 1 - \frac{1}{\eta + 1} \right)}{p} \right)^{\eta + 1} \cdot \left( 1-\dfrac{\eta}{\eta + 1} \right) \Leftrightarrow u = \left( \dfrac{1}{\eta + 1} \right) \cdot \left( \dfrac{w \left( 1 - \frac{1}{\eta + 1} \right)}{p} \right)^{\eta + 1} \Leftrightarrow$$
+$$u = \left( \dfrac{1}{\eta + 1} \right) \cdot \left( \dfrac{w}{p} \cdot \left( 1 - \frac{1}{\eta + 1} \right) \right)^{\eta + 1} \Leftrightarrow u =  \dfrac{1}{\eta + 1} \cdot \left( \dfrac{\eta}{\eta + 1}  \dfrac{w}{p} \right)^{\eta + 1} $$
+\\
+Her ses det at den skatteprovenue maksimerende skattesats giver Patricia en nytte på:
+$$u =  \dfrac{1}{\eta + 1} \cdot \left( \dfrac{\eta}{\eta + 1}  \dfrac{w}{p} \right)^{\eta + 1} $$
+\\
+Hermed er den skat der maksimerer skatteprovenuet "for høj" til at Patricia vil flytte til Danmark, eftersom:
+$$\overline{u} > \dfrac{1}{\eta +1} \left( \dfrac{\eta}{\eta + 1} \dfrac{w}{p} \right)^{\eta + 1} = u$$
+
+\subsubsection*{2.3 Tegn en figur med skattesatsen ud af x-aksen og skatteprovenue ud af y-aksen. Gør det separat for Hans og Patricia og lav en for de to samlet.}
+Se figur 1 for graferne. 
+\\
+Den blå lafferkurve viser skatteprovenuet for Patricia, mens den røde viser for Hans. Hvor skattesatsen $t$ er henad x-aksen og skatteprovenue $T$ henad y-aksen.
+\\
+På figuren ses det at den maksimerede skatteprovonue er højere hos Hans end hos Patricia. Dette er givet ved at Patricias maksimerede skattesats skal være $t^{*} < \frac{1}{1 + \eta}$, fordi hvis hun blev beskattet ved samme skattesats som Hans $t^{*} = \frac{1}{1 + \eta}$, så ville hun ikke arbejde. Patricias nytte er for lav, og hun vil ikke flytte til Danmark for at  betale den høje danske skattesats. Men hvis Patricia fik muligheder for skattelettelser, så ville hun overveje at flytte fra Wales til Danmark.
+
+\FloatBarrier
+\begin{center}
+	\begin{figure}[!ht]	
+		\centering	
+\includegraphics[width=0.5\textwidth]{23.png}
+		\caption{}
+	\end{figure}
+\end{center}
+\FloatBarrier
+
+\subsubsection*{2.4 }
+Vi skal vise at en differentieret skat - en forskerordning - er bedre end en uniform skat, hvis man ønsker at maksimere skatteprovenue. Vi kan illustrere den uniforme skat ved at lægge Patricias og Hans lafferkurve sammen. Se figur 2.
+\\
+\FloatBarrier
+\begin{center}
+	\begin{figure}[!ht]	
+		\centering	
+\includegraphics[width=0.5\textwidth]{24.png}
+		\caption{}
+	\end{figure}
+\end{center}
+\FloatBarrier
+
+Den sorte kurve repræsenterer skatteprovenue ved en uniform skat. Det ses at det maksimale skatteprovenue ligger mellem Patricias og Hans maksimale skattetryk. Hermed vil staten ikke få det maksimale skatteprovenue ud af begge individer ved en uniform skat. 
+\\
+Det vil derfor være bedre med en differentieret skat, hvor Patricias skattesats og Hans skattesats vil være maksimeret hver for sig. Dette vil føre til at staten får det maksimale skatteprovenue fra begge personer. 
+\\\\
+Det er hermed givet at Hans kommer til at betale en højere skattesats end Patricia, men dette er nødvendigt ellers ville Patricia ikke flytte til Danmark. Hun vil nemlig ikke arbejde for samme skattesats som Hans. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Opgave 3}
+En forbruger har efterspørgslesfunktion:
+$$D(p)=A-ap,$$
+\\
+med $A,a > 0$. En virksomhed sætter en pris $0 < p_{1} < A / a$
+
+\subsubsection*{3.1}
+Vi skal finde consumer surplus $CS$. Consumer surplus udgør arealet under efterspørgselsfunktionen, hvor vi har højden $A/a - p_{1}$, og længden $D(p_{1})= A -ap_{1}$. Arealet er en trekant eftersom efterspørgselsfunktionen er lineær. Vi kan derfor finde $CS$ ved at finde trekantens areal:
+$$CS = \dfrac{(A / a - p_{1}) \cdot (A - ap_{1})}{2} = \dfrac{\frac{A^{2}}{a} - 2Ap_{1} + ap_{1}^{2}}{2} $$
+
+\subsubsection*{3.2}
+Vi differentierer $CS$ i forhold til prisen $p$:
+$$\dfrac{\partial CS}{\partial p} = \dfrac{-2A + 2ap}{2} = -A + ap = -(A-ap) = -D(p)$$
+\\
+Her får vi at den afledte af $CS$ giver den negative efterspørgselsfunktion. Dette er fordi at når prisen på en vare ændrer sig, så vil efterspørgslen på varen også ændre sig. Hermed vil det være givet at en prisstigning vil medføre en negativ ændring i varens efterspørgsel. Når prisen stiger og efterspørgslen falder, så vil det betyde at $CS$ falder. Dvs. ændringen i $CS$ som følge af prisændringen er lig den mistede efterspørgsel.
+
+\subsubsection*{3.3}
+Staten pålægger en stykskat $t$, men det holder stadig at $p_{1} + t < A/a$. $p_{1}$ er uændret. Tabet for forbrugeren vil være givet ved tabet af $CS$: $CS_{tab} = CS_{p1} - CS_{p1 + t}$. Vi kender $CS_{p1}$ fra opgave 3.1, men vi mangler $CS_{p1 + t}$. Vi indsætter stykskatten for $CS_{p1}$ og får $CS_{p1 + t}$:
+$$CS_{p1 + t} =  \dfrac{(A / a - (p_{1} + t)) \cdot (A - a(p_{1} + t))}{2} $$
+\\
+Vi finder tabet for forbrugeren $CS_{tab}$:
+$$CS_{tab} = CS_{p1} - CS_{p1 + t} = \dfrac{(A / a - p_{1}) \cdot (A - ap_{1})}{2} -  \dfrac{(A / a - (p_{1} + t)) \cdot (A - a(p_{1} + t))}{2} \Leftrightarrow$$
+$$CS_{tab} = t \left( \left(-p_{1} - \dfrac{t}{2} \right)a + A \right) = A \cdot t - t \cdot p_{1} \cdot a - \dfrac{a\cdot t^{2}}{2}$$
+
+\subsubsection*{3.4}
+Tabet for forbrugeren er opdelt i skatteindtægter og Dead Weight Loss: $CS_{tab} =$ skatteindtægter $+$ DWL. For at finde DWL skal vi derfor først finde skatteindtægterne.
+\\
+Skatteindtægterne dækker arealet med bredden $D(p_{1}+t)$ og højden $(p_{1}+t)-p_{1}$. Hermed:
+$$skatteindtægter = D(p_{1}+t) \cdot (p_{1}+t)-p_{1} = (A-a(p_{1}+t))\cdot (p+t)-p \Leftrightarrow$$
+$$skatteindtægter = -t\cdot p_{1} \cdot a - a \cdot t^{2} + A \cdot t$$
+Vi indsætter skatteindtægterne for $CS_{tab}$ og isolerer DWL:
+$$CS_{tab} = skatteindtægter + DWL \Leftrightarrow DWL = CS_{tab} - skatteindtæger$$
+$$DWL = A \cdot t - t \cdot p_{1} \cdot a - \dfrac{a\cdot t^{2}}{2} - \left( -t\cdot p_{1} \cdot a - a \cdot t^{2} + A \cdot t  \right)$$
+$$DWL = - a \cdot \dfrac{t^{2}}{2}$$
+\\
+Per definition af DWL, så er den numeriske værdi lig tabet, hermed kan vi skrive:
+\\
+DWL $= - a \cdot \dfrac{t^{2}}{2} =a \cdot \dfrac{t^{2}}{2}$
+\subsubsection*{3.5}
+Vi opstiller forholdet mellem DWL og skatteindtægterne og får:
+$$\dfrac{a \cdot \dfrac{t^{2}}{2}}{-t\cdot p_{1} \cdot a - a \cdot t^{2} + A \cdot t } = \dfrac{at^{2}}{2 \left( -t\cdot p_{1} \cdot a - a \cdot t^{2} + A \cdot t   \right)} = \dfrac{at}{2A - 2ap_{1} -2at}$$
+Hermed jo højere $a$ er, destro større en del udgør DWL i forhold til skatteindtægterne.
+\\
+Årsagen til dette er, at når efterspørgselsfunktionen er $D(p) = A-ap$, så har vi $p(q) = \frac{q - A}{a}$. Dvs at jo større $a$ er, jo mere elastisk bliver efterspørgslen og dermed reagerer forbrugerne i større grad på en prisændring, hvilket forstørrer DWL og reducerer skatteindtægterne.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  Dokumentet slutter her %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

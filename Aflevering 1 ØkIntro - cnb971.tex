@@ -1,0 +1,315 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{datetime}
+\usepackage{advdate}
+\usepackage{lipsum}
+\usepackage{booktabs}
+\setlength{\columnsep}{25 pt}
+\usepackage{tabularx,ragged2e,booktabs,caption}
+\usepackage{subfigure}
+\usepackage{multicol,tabularx,capt-of}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{blkarray}
+\usepackage[top=3.4cm,left=2.4cm,right=2.4cm,bottom=3.4cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{placeins}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{semantic}
+\usepackage{pdfpages}
+%Alt der er procenttegn foran er kommentarer
+
+%Koden nedenfor er til, hvis man vil indsætte et billede
+%\FloatBarrier
+%\begin{center}
+%	\begin{figure}[!ht]	
+%		\centering	
+%\includegraphics[width=0.4\textwidth]{}
+%		\caption{}
+%	\end{figure}
+%\end{center}
+%\FloatBarrier
+\usepackage{fancyhdr}
+
+
+\lhead{Jeppe Færch} %Disse tre er til sidehovedet
+\chead{Introduktion til Økonomi}
+\rhead{27-11-2020}
+
+
+\pagestyle{fancy}
+
+
+\begin{document} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  Dokumentet starter her %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textcolor{red}{ Dette er en genaflevering af Aflevering 1 i ØkIntro.
+Alle rettelser og ny tekst er markeret med rød.}\\
+
+\section*{Opgave 1} 
+
+\textbf{En forbruger har en indkomst på 80 og kan forbruge to goder, $x_{1}$ og $x_{2}$. Priserne på de to er henholdsvis, $p_{1}=2$ og $p_{2}=1$.}
+\subsubsection*{1. Opstil budgetbetingelsen og illustrer grafisk.}
+Lad $m=80$, $p_{1}=2$ og $p_{2}=1$
+\\
+Budgetbetingelsen er givet ved: $p_{1}x_{1} + p_{2}x_{2} = m \Leftrightarrow p_{2}x_{2} = m - p_{1}x_{1} \Leftrightarrow x_{2} = \frac{m}{p_{2}} - \frac{p_{1}}{p_{2}} x_{1}$
+\\
+Vi indsætter vores værdier og får budgetbetingelsen:
+$$x_{2} = \frac{80}{1} - \frac{2}{1}x_{1} \Leftrightarrow x_{2} = \frac{80 - 2}{1}x_{1} \Leftrightarrow x_{2} = 80 - 2\cdot x_{1}$$
+\\
+Budgetbetingelsen opstilles som en funktion $f(x)$ og illustreres gennem CAS-værktøjet Maple.
+
+\includegraphics[width=0.6\textwidth]{f1-1.png}
+
+\FloatBarrier
+\begin{center}
+	\begin{figure}[!ht]	
+		\centering	
+\includegraphics[width=0.6\textwidth]{1-1.png}
+		\caption{}
+	\end{figure}
+\end{center}
+\FloatBarrier
+
+\subsubsection*{2. Hvor mange varer af hhv. gode 1 og gode 2 ville forbrugeren kunne købe hvis hun kun bruger pengene på en af varerne?}
+Hvis forbrugeren bruger hele sin indkomst på gode 1, så kan hun få $\frac{m}{p_{1}} = \frac{80}{2} = 40$ varer.
+\\
+Og
+\\
+hvis hun bruger alt på gode 2, så får hun $\frac{m}{p_{2}} = \frac{80}{1}=80$ varer.
+\\
+Dette er illustreret i Figur 1 ved skæring af hhv. $x_{1}$-aksen og $x_{2}$-aksen.
+
+\subsubsection*{3. Nu stiger prisen på gode 1 til $p'=4$. Opstil den nye budgetbetingelse og illustrer.}
+Lad $m=80$, $p'_{1}=4$ og $p_{2}=1$
+\\
+Vi indsætter vores nye værdier og får budgetbetingelsen:
+$$x_{2} = \frac{80}{1} - \frac{4}{1}x_{1} \Leftrightarrow x_{2} = \frac{80 - 4}{1}x_{1} \Leftrightarrow x_{2} = 80 - 4\cdot x_{1}$$
+\\
+Budgetbetingelsen opstilles som en funktion $g(x)$ og illustreres gennem CAS-værktøjet Maple.
+
+\includegraphics[width=0.6\textwidth]{f1-3.png}
+
+\FloatBarrier
+\begin{center}
+	\begin{figure}[!ht]	
+		\centering	
+\includegraphics[width=0.6\textwidth]{1-3.png}
+		\caption{}
+	\end{figure}
+\end{center}
+\FloatBarrier
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Opgave 2}
+\textbf{Forbruger 1's præferencer er repræsenteret ved nyttefunktionen $u(x_{1},x_{2}) = x_{1}x_{2}^{2}$.} 
+
+\subsubsection*{1. Illustrer de bundter (punkter i rummet $(x_{1},x_{2})$) hvor forbrugeren er indifferent med bundtet $(x_{1},x_{2}) = (2,4)$. Illustrer tilsvarende de bundter forbrugeren er indifferent med i forhold til at forbruge $(x_{1},x_{2}) = (3,3)$. }
+Vores forbruger er indifferent i forhold til at forbruge bundterne $(x_{1},x_{2}) = (2,4)$ og $(x_{1},x_{2}) = (3,3)$. \\
+Vi indsætter værdierne i vores nyttefunktion $U$.\\
+For bundt $(x_{1},x_{2}) = (2,4)$: $U_{1} = 2\cdot 4^{2} = 32$\\
+For bundt $(x_{1},x_{2}) = (3,3)$: $U_{2} = 3\cdot 3^{2} = 27$
+\\
+Hertil isolerer vi $x_{2}$ i nyttefunktionen: $U = x_{1}x_{2}^{2} \Leftrightarrow x_{2}^{2} = \frac{U}{x_{1}} \Leftrightarrow x_{2} = \sqrt{\frac{U}{x_{1}}}$
+\\
+Vi indsætter $U_{1}$ og $U_{2}$ og får funktionerne $f(x)$ og $g(x)$.
+
+$$f(x) = x_{2} = \sqrt{\frac{U_{1}}{x_{1}}} = \sqrt{\frac{32}{x_{1}}}$$
+$$g(x) = x_{2} = \sqrt{\frac{U_{2}}{x_{1}}} = \sqrt{\frac{27}{x_{1}}}$$
+\\
+Indifferenskurverne illustreres gennem CAS-værktøjet Maple.
+
+\FloatBarrier
+\begin{center}
+	\begin{figure}[!ht]	
+		\centering	
+\includegraphics[width=0.5\textwidth]{2-1.png}
+		\caption{}
+	\end{figure}
+\end{center}
+\FloatBarrier
+
+\textbf{Forbruger 2's præferencer er repræsenteret ved nyttefunktionen $u(x_{1},x_{2}) = ln(x_{1}) + 2ln(x_{2})$, hvor $ln$ er den naturlige logaritme.}
+
+\subsubsection*{2. Illustrer de punkter hvor forbrugeren er indifferent med bundtet $(x_{1},x_{2}) = (2,4)$ og gør det samme for $(3,3)$. }
+Vores forbruger er indifferent i forhold til at forbruge bundterne $(x_{1},x_{2}) = (2,4)$ og $(x_{1},x_{2}) = (3,3)$. \\
+Vi indsætter værdierne i vores nyttefunktion $U$.\\
+For bundt $(x_{1},x_{2}) = (2,4)$: $U_{1} = ln(x_{1}) + 2ln(x_{2}) = ln(2) + 2ln(4) =5ln(2)$\\
+For bundt $(x_{1},x_{2}) = (3,3)$: $U_{2} = ln(x_{1}) + 2ln(x_{2}) = ln(3) + 2ln(3) = 3ln(3)$
+
+Hertil isolerer vi $x_{2}$ i nyttefunktionen: 
+
+$$U =ln(x_{1}) + 2ln(x_{2}) \Leftrightarrow 2ln(x_{2}) = U - ln(x_{1}) \Leftrightarrow ln(x_{2}) = \frac{U}{2}-\frac{ln(x_{1})}{2} \Leftrightarrow x_{2} = \frac{U}{2} + ln \left( \frac{1}{\sqrt{x_{1}}} \right)$$
+$$x_{2} = e^{\frac{U}{2} + ln(1 / \sqrt{x_{1}})}  \Leftrightarrow x_{2} = e^{\frac{U}{2}} e^{ln(1 / \sqrt{x_{1}})} \Leftrightarrow x_{2} = \frac{e^{\frac{U}{2}}}{\sqrt{x_{1}}} $$
+
+Vi indsætter $U_{1}$ og $U_{2}$ og får funktionerne $f(x)$ og $g(x)$.
+
+$$f(x) = x_{2} =  \frac{e^{\frac{U_{1}}{2}}}{\sqrt{x_{1}}} =  \frac{e^{\frac{5ln(2)}{2}}}{\sqrt{x_{1}}} = \frac{4\sqrt{3}}{\sqrt{x}} $$
+$$g(x) = x_{2} = \frac{e^{\frac{U_{2}}{2}}}{\sqrt{x_{1}}}=  \frac{e^{\frac{3ln(3)}{2}}}{\sqrt{x_{1}}} = \frac{3\sqrt{3}}{\sqrt{x}} $$
+Indifferenskurverne illustreres gennem CAS-værktøjet Maple.
+
+\FloatBarrier
+\begin{center}
+	\begin{figure}[!ht]	
+		\centering	
+\includegraphics[width=0.4\textwidth, height=0.3\textheight]{2-2.png}
+		\caption{}
+	\end{figure}
+\end{center}
+\FloatBarrier
+
+
+\subsubsection*{3. Beskriv de to indifferenskurver du har tegnet. Hvordan afviger forbruger 1's præferencer fra forbruger 2's?}
+De to forbrugere har forskellige nyttefunktioner, men de har fælles indiferrenskurver, dette er fordi nyttefunktionerne er positive monotone transformationer af hinanden. Hermed repræsenterer nyttefunktionerne de samme præferencer.
+
+\subsubsection*{4. Er forbrugernes præferencer konvekse? Strengt konvekse?}
+\textcolor{red}{Vi undersøger præferencerne matematisk.}
+\\
+\textcolor{red}{Givet forbruger 1 bemærker vi for fast $\overline{u}$ at $x_{2} = \sqrt{\frac{u}{x_{1}}}$ }
+\textcolor{red}{$$\dfrac{\partial x_{2}}{\partial x_{1}} = - \dfrac{ \sqrt{u}}{2x_{1}^{3/2}} < 0$$}
+\textcolor{red}{$$\dfrac{\partial ^{2} x_{2}}{\partial x_{1}^{2}} = \dfrac{ 3\sqrt{u}}{4x_{1}^{5/2}} > 0 $$}
+\\
+\textcolor{red}{Hvor den første afledte er negativ og den anden afledte er positiv, fordi $u$ vil altid være positiv, og derfor har forbruger 1 strengt konvekse præferencer.}
+\\\\
+\textcolor{red}{Givet forbruger 2 bemærker vi for fast $\overline{u}$ at $x_{2} = \frac{e^{\frac{u}{2}}}{\sqrt{x_{1}}}$ }
+\textcolor{red}{$$\dfrac{\partial x_{2}}{\partial x_{1}} = - \dfrac{ e^{u/2}}{2x_{1}^{3/2}} < 0$$}
+\textcolor{red}{$$\dfrac{\partial ^{2} x_{2}}{\partial x_{1}^{2}} = \dfrac{ 3e^{u/2}}{4x_{1}^{5/2}} > 0 $$}
+\\
+\textcolor{red}{Hvor den første afledte er negativ og den anden afledte er positiv, fordi $u$ vil altid være positiv, og derfor har forbruger 2 strengt konvekse præferencer.}
+\\\\
+\textbf{Lad $g(z)$ være en strengt monoton funktion, dvs.}
+$$\frac{dg(z)}{dz} > 0, for  \, alle \, z.$$
+
+\subsubsection*{5. Vis, at hvis en forbruger 3 har præferencer repræsenteret ved $v(x_{1},x_{2}) = g(x_{1}x_{2}^{2})$ da må forbruger 3 have de samme præferencer som forbruger 2 ( hint: brug kædereglen til at udlede MRS for både $x_{1}x_{2}^{2}$ og $v(x_{1},x_{2})$ og vis at den tilhørende "ranking" af indifferenskurverne er den samme når $g(z)$ er monoton).}
+\textcolor{red}{Vi finder marginalnytterne og MRS for $x_{1}x_{2}^{2}$.}
+\textcolor{red}{$$MU_{1} = \dfrac{\partial (x_{1}x_{2}^{2})}{\partial x_{1}} = x_{2}^{2} > 0$$}
+\textcolor{red}{$$MU_{2} = \dfrac{\partial (x_{1}x_{2}^{2})}{\partial x_{2}} = 2x_{1}x_{2} > 0$$}
+\textcolor{red}{$$MRS = - \dfrac{MU_{1}}{MU_{2}} = -\dfrac{x_{2}^{2}}{2x_{1}x_{2}} = -\dfrac{x_{2}}{2x_{1}}$$}
+\\\\
+\textcolor{red}{Vi finder marginalnytterne og MRS for $v(x_{1},x_{2}) = g(x_{1}x_{2}^{2})$.}
+\textcolor{red}{$$MU_{1} = \dfrac{\partial v}{\partial x_{1}} = \left( \dfrac{\partial (x_{1}x_{2}^{2})}{\partial x_{1}} \right) g'(x_{1}x_{2}^{2}) = x_{2}^{2} \cdot  g'(x_{1}x_{2}^{2}) > 0$$}
+\textcolor{red}{$$MU_{2} = \dfrac{\partial v}{\partial x_{2}} =  \left( \dfrac{\partial (x_{1}x_{2}^{2})}{\partial x_{2}} \right) g'(x_{1}x_{2}^{2}) = 2x_{1}x_{2} \cdot g'(x_{1}x_{2}^{2}) > 0 $$}
+\textcolor{red}{$$MRS = - \dfrac{MU_{1}}{MU_{2}} = -\dfrac{x_{2}^{2} \cdot  g'(x_{1}x_{2}^{2})}{2x_{1}x_{2} \cdot g'(x_{1}x_{2}^{2})} = -\dfrac{x_{2}^{2}}{2x_{1}x_{2}} = - \dfrac{x_{2}}{2x_{1}}$$}
+\\
+\textcolor{red}{Her ses det at så længe at $x_{1}, x_{2} > 0$ og $g(z)$ er monoton, så vil forbruger 3 have monotone præferencer, dette er repræsenteret ved $MU_{1},MU_{2} > 0$. Forbruger 3 har tildels samme MRS som forbruger 1.}
+\textcolor{red}{Vi undersøger om $v(x_{1},x_{2})$ er konveks.}
+\\
+\textcolor{red}{Vi bemærker for fast $\overline{v}$ at $x_{2} = \dfrac{\sqrt{v}}{\sqrt{x_{1}}}$ }
+\textcolor{red}{$$\dfrac{\partial x_{2}}{\partial x_{1}} = - \dfrac{ \sqrt{v}}{2x_{1}^{3/2}} < 0$$}
+\textcolor{red}{$$\dfrac{\partial ^{2} x_{2}}{\partial x_{1}^{2}} = \dfrac{ 3\sqrt{v}}{4x_{1}^{5/2}} > 0 $$}
+\\
+\textcolor{red}{Hvor den første afledte er negativ og den anden afledte er positiv, fordi $v$ vil altid være positiv, og derfor har forbruger 3 strengt konvekse præferencer. Hermed har forbruger 3 de samme præferencer som forbruger 1 og forbruger 2.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Opgave 3}
+\textbf{En forbrugers præferencer er givet ved $u(x_{1},x_{2}) = x_{1}^{1/2}x_{2}^{1/2}$. Lad priserne være være givet ved $p_{1},p_{2} > 0$ og indkomsten ved $m > 0$.}
+
+\subsubsection*{1. Er forbrugerens præferencer monotone? Strengt konvekse? Opstil forbrugerens problem matematisk og løs det matematisk.}
+\textcolor{red}{Vi differentierer $u$ i forhold til goderne $x_{1}$ og $x_{2}$}
+\textcolor{red}{$$\dfrac{\partial u}{\partial x_{1}} = \dfrac{x_{2}}{2\sqrt{x_{1}x_{2}}} > 0$$}
+\textcolor{red}{$$\dfrac{\partial u}{\partial x_{2}} = \dfrac{x_{1}}{2\sqrt{x_{1}x_{2}}} > 0$$}
+\\
+\textcolor{red}{Det vil sige at så længe $x_{1}$ og $x_{2}$  er større end $0$, så er de afledte større end $0$. Hermed har vi monotone præferencer.}
+\\
+\textcolor{red}{Vi bemærker for fast $\overline{u}$ at $x_{2} = \dfrac{u^{2}}{x_{1}}$ }
+\textcolor{red}{$$\dfrac{\partial x_{2}}{\partial x_{1}} = -\dfrac{u^{2}}{x_{1}^{2}}< 0$$}
+\textcolor{red}{$$\dfrac{\partial ^{2} x_{2}}{\partial x_{1}^{2}} = \dfrac{2u^{2}}{x_{1}^{3}} > 0 $$}
+\\
+\textcolor{red}{Så vi har konvekse præferencer og kan finde $max(u)$ ved Lagrange-funktionen.}
+\\
+Forbrugerens problem er $max_{x1,x2}u(x_{1},x_{2}) = max(x_{1}^{1/2}x_{2}^{1/2})$ st. $p_{1}x_{1} + p_{2}x_{2} = m.$
+\\
+Vi opstiller Lagrange-funktionen:
+$$L(x_{1},x_{2}, \lambda) = u(x_{1},x_{2}) - \lambda ( p_{1}x_{1} + p_{2}x_{2} - m)$$
+$$L(x_{1},x_{2}, \lambda) = x_{1}^{1/2}x_{2}^{1/2} - \lambda ( p_{1}x_{1} + p_{2}x_{2} - m)$$
+\\
+Vi udregner førsteordensbetingelserne:\\
+1) Vi differentierer i forhold til $x_{1}$
+$$\dfrac{\partial L}{\partial x_{1}} = 0 \Leftrightarrow \frac{\sqrt{x_{2}}}{2\sqrt{x_{1}}} - \lambda p_{1} = 0 \Leftrightarrow \frac{\sqrt{x_{2}}}{2\sqrt{x_{1}}} = \lambda p_{1} $$
+\\
+2) Vi differentierer i forhold til $x_{2}$
+$$\dfrac{\partial L}{\partial x_{2}} = 0 \Leftrightarrow \frac{\sqrt{x_{1}}}{2\sqrt{x_{2}}} - \lambda p_{2} = 0 \Leftrightarrow \frac{\sqrt{x_{1}}}{2\sqrt{x_{2}}} = \lambda p_{2}$$
+\\
+3) Vi differentierer i forhold til $\lambda$
+$$\dfrac{\partial L}{\partial \lambda} = 0 \Leftrightarrow p_{1}x_{1} + p_{2}x_{2} = m$$
+\\
+Vi dividerer 1) med 2), så vi kan isolerer $x_{2}$.
+$$\dfrac{\frac{\sqrt{x_{2}}}{2\sqrt{x_{1}}}}{\frac{\sqrt{x_{1}}}{2\sqrt{x_{2}}}} = \dfrac{\lambda p_{1}}{\lambda p_{2}} \Leftrightarrow \dfrac{x_{2}}{x_{1}} = \dfrac{p_{1}}{p_{2}} \Leftrightarrow x_{2} = x_{1} \dfrac{p_{1}}{p_{2}}$$
+\\
+Vi indsætter $x_{2}$ i 3) og isolerer $x_{1}^{*}$
+$$ p_{1}x_{1} + p_{2} \dfrac{p_{1}}{p_{2}}x_{1} = m  \Leftrightarrow 2p_{1}x_{1} = m \Leftrightarrow x_{1}^{*} = \dfrac{m}{2p_{1}}$$\\
+Hermed vil forbrugeren bruge halvdelen af sin indkomst på gode 1.\\
+Ud fra antagelsen at hele $m$ bliver brugt:  $ x_{2}^{*} = \dfrac{m}{2p_{2}}$.
+
+\subsubsection*{2. Er gode 1 et normalt/inferiørt gode? Et giffen/ordinært gode? Er gode 1 og gode 2 substitutter eller komplementer?}
+Givet at $p_{1},p_{2} > 0$ og indkomsten $m > 0$ og ud fra antagelsen at hele $m$ bliver brugt splittet 50/50 mellem de to goder, så må det antages at:
+\\
+Gode 1 er et normalt gode, eftersom \textcolor{red}{ $\frac{\partial x_{1}}{\partial m} = \frac{1}{2p_{1}} > 0$}. Gode 1 er også et ordinært gode, da $\frac{\partial x_{1}}{\partial p_{1}} = - \frac{m}{2p_{1}^{2}} < 0$.
+\\
+\textcolor{red}{Vi tjekker om goderne er substitutter eller komplimenter ved at differentiere $x_{1}^{*}$ (eller $x_{2}^{*}$) i forhold til den anden vares pris.}
+\\
+\textcolor{red}{Hvis $x_{1},x_{2}$ er komplimenter, så vil efterspørgslen på $x_{1}$ falde, når prisen på $x_{2}$ stiger: $ \dfrac{\partial x_{1}}{\partial p_{2}} < 0$ }
+\\
+\textcolor{red}{ Hvis $x_{1},x_{2}$ er substitutter, så vil efterspørgslen på $x_{1}$ stige, når prisen på $x_{2}$ stiger: $ \dfrac{\partial x_{1}}{\partial p_{2}} > 0$ }
+\\
+\textcolor{red}{Givet efterspørgselsfunktionen $x_{1}^{*} = \dfrac{m}{2p_{1}} $:}
+\textcolor{red}{$$\dfrac{\partial x_{1}}{\partial p_{2}} = 0$$}
+\\
+\textcolor{red}{Her får vi ingen af de to. De to goder $x_{1}$ og $x_{2}$ er altså uafhængige.}
+\\\\
+\textbf{Antag at priserne er $p_{1}=p_{2}=1$ og indkomsten $m=32$.}\\
+\textbf{Forbrugeren pålægges nu en stykskat på $t=3$ på gode 1.}
+\subsubsection*{3. Hvordan påvirker det forbrugerens nytte? Hvor meget får staten ind i skatteindtægter?}
+Lad $p_{1}=p_{2}=1$, $m=32$\\
+Først bestemmer vi efterspørgselsværdierne.\\
+Vi indsætter vores værdier for $p_{1},p_{2}, m$ i $x_{1}^{*}$ og $x_{2}^{*}$:
+$$x_{1}^{*} = \dfrac{32}{2\cdot 1} = 16$$
+$$x_{2}^{*} = \dfrac{32}{2\cdot 1} = 16$$\\
+Forbrugeren efterspørger her 16 af gode 1 og 16 af gode 2.
+\\
+Vi finder forbrugerens nytte ved at indsætte vores efterspørgselsværdier for $x_{1}^{*}$ og $x_{2}^{*}$ i nyttefunktionen:
+$$x_{1}^{1/2}x_{2}^{1/2} = 16^{1/2}16^{1/2} = 16$$
+Hermed er forbrugerens nytte 16 \textbf{før stykskat}
+\\\\
+Vi pålægger stykskatten $t=3$ på gode 1.\\
+Dette ændrer budgetbetingelsen til: $(p_{1}+t)\cdot x_{1} + p_{2}x_{2} =m$\\
+Hermed får vi en ny efterspørgselsværdi for $x_{1}^{*}$:
+$$x_{1}^{*} = \dfrac{32}{2\cdot (1+t)} = \dfrac{32}{2\cdot (1+3)}= \dfrac{32}{8} = 4$$
+Efterspørgslen for gode 1 falder, fordi prisen stiger.\\
+Forbrugerens nytte ændres:
+$$x_{1}^{1/2}x_{2}^{1/2} = 4^{1/2}16^{1/2} = 8$$
+\\
+Det ses at forbrugerens nytte er faldet efter stykskatten. Dette skyldes at prisen på gode 1 er steget, hvilket gør at forbrugeren ikke kan få ligeså meget for pengene som før.\\\\
+Staten vil få indbetalt $x_{1}^{*} \cdot t = 4 \cdot 3 = 12$ kr i skatteindtægter for hvert antal af gode 1 solgt. (enhed er ikke opgivet i opgaven, men det antages at kroner bruges).
+
+
+\subsubsection*{4. Staten overvejer at ændre skatterne denne forbruger står overfor til en indkomst skat, $T$, (så indkomsten efter skat er $m-T$), men vil helst ikke stille hende værre (eller bedre). Hvor meget kan staten få i skatteindtæger hvis den ændrer skattesystemet, men lader forbrugeren være indifferent? Hvorfor er de to forskellige og hvilken skat er at foretrække? Hvorfor?}
+For at opnå den højeste skatteindtægt, så kan vi regne baglæns fra forbrugerens nytte.\\
+Hvis vi lader forbrugerens nytte være 8 for indkomstskat, så vil forbrugeren være indifferent mellem de to skattesystemer.\\
+Givet en nytte på 8, så er efterspørgselsværdierne:
+$$ 8 = 8^{1/2}\cdot 8^{1/2}$$
+$$x_{1}^{*} = 8 $$
+$$x_{2}^{*} = 8 $$
+\\
+Vi indsætter $p_{1},p_{2},x_{1}^{*}, x_{2}^{*}, m$ i budgetbetingelsen for indkomstskat og isolerer skatteindtægterne $T$:
+$$p_{1}x_{1} + p_{2}x_{2} = m - T \Leftrightarrow 8 + 8 = 32 - T \Leftrightarrow T+16=32 \Leftrightarrow T = 16$$
+\\
+Hermed kan Staten få 16 kr i skatteindtægt gennem indkomstskat fremfor 12 kr ved stykskat, når forbrugeren har en nytte på 8.  Indkomstskat foretrækkes for at maksimere  \textcolor{red}{skatte}indtægter.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  Dokumentet slutter her %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
